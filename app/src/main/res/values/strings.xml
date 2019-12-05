@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">wanandroidjetpack</string>
+    
+    <string name="home_page">首页</string>
+    <string name="square_page">广场</string>
+    <string name="public_page">公众号</string>
+    <string name="system_page">体系</string>
+    <string name="project_page">项目</string>
+
+</resources>

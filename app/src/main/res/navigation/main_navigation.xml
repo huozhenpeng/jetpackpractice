@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/publicFragment"
+        android:name="com.example.wanandroidjetpack.ui.main.PublicFragment"
+        android:label="PublicFragment" />
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.example.wanandroidjetpack.ui.main.ProjectFragment"
+        android:label="ProjectFragment" />
+    <fragment
+        android:id="@+id/squareFragment"
+        android:name="com.example.wanandroidjetpack.ui.main.SquareFragment"
+        android:label="SquareFragment" />
+    <fragment
+        android:id="@+id/systemFragment"
+        android:name="com.example.wanandroidjetpack.ui.main.SystemFragment"
+        android:label="SystemFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wanandroidjetpack.ui.main.HomeFragment"
+        android:label="HomeFragment" />
+</navigation>
