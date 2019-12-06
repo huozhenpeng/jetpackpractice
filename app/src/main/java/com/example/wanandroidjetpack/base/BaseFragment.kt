@@ -1,6 +1,7 @@
 package com.example.wanandroidjetpack.base
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,8 @@ import kotlinx.coroutines.MainScope
 
 abstract  class BaseFragment<VB : ViewDataBinding> : Fragment(),CoroutineScope by MainScope() {
 
-    private lateinit var mBinding: VB
+
+    protected lateinit var mBinding: VB
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,10 +28,19 @@ abstract  class BaseFragment<VB : ViewDataBinding> : Fragment(),CoroutineScope b
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.e("abc","onViewCreated:"+BaseFragment@this::class.java.simpleName)
         mBinding.lifecycleOwner=this
         initFragment(view,savedInstanceState)
 
     }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.e("abc","onDestroyView:"+BaseFragment@this::class.java.simpleName)
+    }
+
+
 
     abstract fun getLayoutId():Int
     abstract fun initFragment(view: View, savedInstanceState: Bundle?)

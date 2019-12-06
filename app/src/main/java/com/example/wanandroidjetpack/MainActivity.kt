@@ -16,6 +16,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         mBinding.navigationView.setupWithNavController(Navigation.findNavController(this,R.id.nav_host_fragment))
 
+        //记得menu中item的id和navigation.xml中fragment的id要相同，要不然无法跳转
         mBinding.navigationView.setOnNavigationItemSelectedListener {
             item->
             onNavDestinationSelected(item, Navigation.findNavController(this, R.id.nav_host_fragment))
