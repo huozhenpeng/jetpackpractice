@@ -13,7 +13,7 @@
         tools:context=".MainActivity">
 
         <!--下面的两行代码都需要设置,id也必须指定，要不然报错-->
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -21,9 +21,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@id/navigation_view"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:navGraph="@navigation/main_navigation"
-            app:defaultNavHost="true"
             />
 
 
